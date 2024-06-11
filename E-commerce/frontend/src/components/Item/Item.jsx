@@ -1,0 +1,20 @@
+import React from "react";
+import "./item.css";
+import { Link } from "react-router-dom";
+
+const Item = ({ id, name, image, old_price, new_price }) => {
+  return (
+    <div className="item">
+      <Link to={`/product/${id}` }className="itemImg">
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <img src={image} />
+      </Link>
+      <p>{name}</p>
+      <span>${new_price}</span>
+      <span className="oldPrice">${old_price}</span>
+    </div>
+  );
+};
+
+export default Item;
